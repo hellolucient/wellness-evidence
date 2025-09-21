@@ -34,115 +34,115 @@ export function createClientClient() {
 // Database schema types
 export interface Database {
   public: {
-    Tables: {
-      documents: {
-        Row: {
-          id: string;
-          title: string;
-          abstract: string;
-          authors: string[];
-          journal: string;
-          publication_date: string;
-          doi?: string;
-          pmid?: string;
-          url?: string;
-          study_type: string;
-          sample_size?: number;
-          conflicts_of_interest?: string[];
-          keywords: string[];
-          created_at: string;
-          updated_at: string;
-        };
-        Insert: {
-          id?: string;
-          title: string;
-          abstract: string;
-          authors: string[];
-          journal: string;
-          publication_date: string;
-          doi?: string;
-          pmid?: string;
-          url?: string;
-          study_type: string;
-          sample_size?: number;
-          conflicts_of_interest?: string[];
-          keywords: string[];
-          created_at?: string;
-          updated_at?: string;
-        };
-        Update: {
-          id?: string;
-          title?: string;
-          abstract?: string;
-          authors?: string[];
-          journal?: string;
-          publication_date?: string;
-          doi?: string;
-          pmid?: string;
-          url?: string;
-          study_type?: string;
-          sample_size?: number;
-          conflicts_of_interest?: string[];
-          keywords?: string[];
-          created_at?: string;
-          updated_at?: string;
-        };
-      };
-      chunks: {
-        Row: {
-          id: string;
-          document_id: string;
-          content: string;
-          chunk_index: number;
-          embedding?: number[];
-          metadata: any;
-          created_at: string;
-        };
-        Insert: {
-          id?: string;
-          document_id: string;
-          content: string;
-          chunk_index: number;
-          embedding?: number[];
-          metadata: any;
-          created_at?: string;
-        };
-        Update: {
-          id?: string;
-          document_id?: string;
-          content?: string;
-          chunk_index?: number;
-          embedding?: number[];
-          metadata?: any;
-          created_at?: string;
-        };
-      };
-      citations: {
-        Row: {
-          id: string;
-          document_id: string;
-          chunk_id: string;
-          text: string;
-          position: number;
-          created_at: string;
-        };
-        Insert: {
-          id?: string;
-          document_id: string;
-          chunk_id: string;
-          text: string;
-          position: number;
-          created_at?: string;
-        };
-        Update: {
-          id?: string;
-          document_id?: string;
-          chunk_id?: string;
-          text?: string;
-          position?: number;
-          created_at?: string;
-        };
-      };
+        Tables: {
+          wellness_documents: {
+            Row: {
+              id: string;
+              title: string;
+              abstract: string;
+              authors: string[];
+              journal: string;
+              publication_date: string;
+              doi?: string;
+              pmid?: string;
+              url?: string;
+              study_type: string;
+              sample_size?: number;
+              conflicts_of_interest?: string[];
+              keywords: string[];
+              created_at: string;
+              updated_at: string;
+            };
+            Insert: {
+              id?: string;
+              title: string;
+              abstract: string;
+              authors: string[];
+              journal: string;
+              publication_date: string;
+              doi?: string;
+              pmid?: string;
+              url?: string;
+              study_type: string;
+              sample_size?: number;
+              conflicts_of_interest?: string[];
+              keywords: string[];
+              created_at?: string;
+              updated_at?: string;
+            };
+            Update: {
+              id?: string;
+              title?: string;
+              abstract?: string;
+              authors?: string[];
+              journal?: string;
+              publication_date?: string;
+              doi?: string;
+              pmid?: string;
+              url?: string;
+              study_type?: string;
+              sample_size?: number;
+              conflicts_of_interest?: string[];
+              keywords?: string[];
+              created_at?: string;
+              updated_at?: string;
+            };
+          };
+          wellness_chunks: {
+            Row: {
+              id: string;
+              document_id: string;
+              content: string;
+              chunk_index: number;
+              embedding?: number[];
+              metadata: any;
+              created_at: string;
+            };
+            Insert: {
+              id?: string;
+              document_id: string;
+              content: string;
+              chunk_index: number;
+              embedding?: number[];
+              metadata: any;
+              created_at?: string;
+            };
+            Update: {
+              id?: string;
+              document_id?: string;
+              content?: string;
+              chunk_index?: number;
+              embedding?: number[];
+              metadata?: any;
+              created_at?: string;
+            };
+          };
+          wellness_citations: {
+            Row: {
+              id: string;
+              document_id: string;
+              chunk_id: string;
+              text: string;
+              position: number;
+              created_at: string;
+            };
+            Insert: {
+              id?: string;
+              document_id: string;
+              chunk_id: string;
+              text: string;
+              position: number;
+              created_at?: string;
+            };
+            Update: {
+              id?: string;
+              document_id?: string;
+              chunk_id?: string;
+              text?: string;
+              position?: number;
+              created_at?: string;
+            };
+          };
     };
   };
 }
